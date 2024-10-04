@@ -2,8 +2,6 @@ import React from "react"
 
 export default function Meme() {
 
-
-
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
@@ -19,7 +17,7 @@ export default function Meme() {
         }
         getMemes()
     }, [])
-    
+
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
@@ -42,6 +40,7 @@ export default function Meme() {
         <main>
             <div className="form">
                 <input 
+                id="top-text"
                     type="text"
                     placeholder="Top text"
                     className="form--input"
@@ -50,6 +49,7 @@ export default function Meme() {
                     onChange={handleChange}
                 />
                 <input 
+                id="bottom-text"
                     type="text"
                     placeholder="Bottom text"
                     className="form--input"
