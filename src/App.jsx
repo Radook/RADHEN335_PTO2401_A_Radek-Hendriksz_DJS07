@@ -1,11 +1,12 @@
 import Header from "./components/Header.jsx"
+import Meme from "./components/Meme"
 
 function App() {
 
   return (
     <>
         <Header />
-        <h1>Testing</h1>
+        <Meme />
     </>
   )
 }
